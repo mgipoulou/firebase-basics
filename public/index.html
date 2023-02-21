@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Basics</title>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyCv9kbZ8DGyyT-_KyIZjQyZEcsbhNytkGE",
+      authDomain: "my-project-therm-375018.firebaseapp.com",
+      databaseURL: "https://my-project-therm-375018-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "my-project-therm-375018",
+      storageBucket: "my-project-therm-375018.appspot.com",
+      messagingSenderId: "346313463805",
+      appId: "1:346313463805:web:e5fe46fdfd072170c3eb94"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+  </script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+    integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
+    crossorigin="anonymous"></script>
+
+
+</head>
+
+
+
+<h1>My Awesome App 🔥</h1>
+
+<section id="whenSignedOut">
+
+  <button id="signInBtn" class="btn btn-primary">Sign in with Google</button>
+
+</section>
+
+<section id="whenSignedIn" hidden="true">
+
+  <div id="userDetails"></div>
+
+  <button id="signOutBtn" class="btn btn-primary">Sign Out</button>
+
+</section>
+
+<section>
+  <ul id="thingsList">
+  </ul>
+
+  <button id="createThing" class="btn btn-primary">Créer des trucs random</button>
+
+
+
+</section>
+
+</html>
